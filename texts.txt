@@ -1,3 +1,14 @@
+
+# raw version
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views import View
+
+from .forms import CourseModelForm
+from .models import Course 
+# BASE VIEW CLass = VIEW
+
+
+#custom Mixin use for inhert for other class
 class CourseObjectMixin(object):
     model = Course
     def get_object(self):
@@ -6,3 +17,124 @@ class CourseObjectMixin(object):
         if id is not None:
             obj = get_object_or_404(self.model, id=id)
         return obj 
+
+class CourseDeleteView(CourseObjectMixin, View):
+    template_name = "courses/course_delete.html" # DetailView
+    def get(self, request, id=None, *args, **kwargs):
+        # GET method
+        context = {}
+        obj = self.get_object()
+        if obj is not None:
+            context['object'] = obj
+        return render(request, self.template_name, context)
+
+    def post(self, request, id=None,  *args, **kwargs):
+        # POST method
+        context = {}
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            context['object'] = None
+            return redirect('/courses/')
+        return render(request, self.template_name, context)
+
+
+class CourseUpdateView(CourseObjectMixin, View):
+    template_name = "courses/course_update.html" # DetailView
+    # override what you would typically do for your detailview
+    # having a method in there called objects to use in various methods
+    def get_object(self):
+        # get id to update
+        id = self.kwargs.get('id')
+        # grabs the obj
+        obj = None
+        if id is not None:
+            obj = get_object_or_404(Course, id=id)
+        return obj
+
+    def get(self, request, id=None, *args, **kwargs):
+        # GET method
+        context = {}
+        obj = self.get_object()
+        if obj is not None:
+            # pass in to myform as instance so 
+            form = CourseModelForm(instance=obj)
+            context['object'] = obj
+            context['form'] = form
+        return render(request, self.template_name, context)
+
+    def post(self, request, id=None,  *args, **kwargs):
+        # POST method
+        context = {}
+        # having object inside of our context
+        obj = self.get_object()
+        if obj is not None:
+            # this is grabbing that post data along with that instance 
+            form = CourseModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+            context['object'] = obj
+            context['form'] = form
+        return render(request, self.template_name, context)
+
+
+class CourseCreateView(View):
+    template_name = "courses/course_create.html" # DetailView
+    def get(self, request, *args, **kwargs):
+        # GET method
+        form = CourseModelForm()
+        context = {"form": form}
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        # POST method
+        form = CourseModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # starting all over to make another form
+            form = CourseModelForm()
+        context = {"form": form}
+        return render(request, self.template_name, context)
+
+
+class CourseListView(View):
+    template_name = "courses/course_list.html"
+    queryset = Course.objects.all()
+
+    # for inherit purposes
+    def get_queryset(self):
+        return self.queryset
+
+    def get(self, request, *args, **kwargs):
+        context = {'object_list': self.get_queryset()}
+        return render(request, self.template_name, context)
+
+# BASE VIEW Class = VIEW
+class CourseView(CourseObjectMixin, View):
+    template_name = "courses/course_detail.html" # DetailView
+
+    # new object of a class, 
+    # object is an instace of that class sort of reference, reference self inside
+    
+    """
+    # pass in a parameter from url
+    # make sure both templates be able to work:
+    # path('', CourseListView.as_view(), name='courses-list'),
+    # path('<int:id>/', CourseView.as_view(), name='course-detail'),
+    # pass in 
+    # 
+    # id=None means id is no longer required; default
+    """
+    def get(self, request, id=None, *args, **kwargs):
+        # GET method
+
+        context = {'object': self.get_object()}
+        return render(request, self.template_name, context)
+
+    # def post(request, *args, **kwargs):
+    #     return render(request, 'about.html', {})
+
+# HTTP METHODS
+def my_fbv(request, *args, **kwargs):
+    print(request.method)
+    return render(request, 'about.html', {})
