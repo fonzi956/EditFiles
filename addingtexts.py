@@ -15,6 +15,9 @@ for line in file:
                 newtexts += "+\"<br> "+ "&nbsp; "*int(nob) + line[nos:-1] + "\"\n"
                 #print("+\"<br> "+ "&nbsp; "*int(nob) + line[:-2] + "\"")
             else:
+                line = line.replace("'", "\\'")
+                line = line.replace("`", "\\`")
+                line = line.replace('"', '\\"')
                 newtexts += '+"<br> '+ line[:-1] + '"\n'
                 #print('+"<br> '+ line[:-2] + '"')
             break
