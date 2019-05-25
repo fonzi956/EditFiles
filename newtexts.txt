@@ -1,1 +1,339 @@
-starting at the top we're importing the library we're importing react Dom and then we're importing the main app component okay as I said there's a main parent app component that wraps around everything and then here react Dom is rendering the app component into that element with the ID of root okay so this this document dot get element by ID is actually grabbing this div right here and then it's inserting the app component 
+		["Explain the architecture of Django?",
+		"Django architecture consists of:"
+		+"<br>Models: It describes your database schema and your data structure"
+		+"<br>Views: It controls what a user sees, the view retrieves data from appropriate models and execute any calculation made to the data and pass it to the template"
+		+"<br>Templates: It determines how the user sees it. It describes how the data received from the views should be changed or formatted for display on the page"
+		+"<br>Controller: It is the heart of the system. It handles request and responses, setting up database connections and loading add-ons and specifies Django framework and URL parsing.",
+		"Explain the architecture of Django"],
+
+		["Why should Django be used for web development?",
+		"Django should be used for web development because of following reasons:"
+		+"<br>•It allows dividing code module into logical groups to make it flexible to change."
+		+"<br>•easy the website administration, it provides auto-generated web admin module."
+		+"<br>•It provides pre-packaged API for common user tasks."
+		+"<br>•define what should be URL for given function."
+		+"<br>•separate business logic from the HTML."
+		+"<br>•Written in Python."
+		+"<br>•It gives you template system to define HTML template for your web page to avoid code duplication",
+		"Why should Django be used for web development"],
+
+		["Can you explain the working philosophy of Django?",
+		"Django can be broken into many components:"
+		+"<br>Models.py file: This file defines your data model by extending your single line of code into full database tables and add a pre-built administration section to manage content."
+		+"<br>Urls.py file: It uses a regular expression to capture URL patterns for processing."
+		+"<br>Views.py file: It is the main part of Django. The actual processing happens in view."
+		+"<br>When a visitor lands on Django page:"
+		+"<br>1.Django checks the various URLs pattern you have created and uses the information to retrieve the view."
+		+"<br>2.The view processes the request, querying your database if necessary"
+		+"<br>3.The view passes the requested information on to your template."
+		+"<br>4.The template renders the data in a layout you have created and displays the page.",
+		"Can you explain the working philosophy of Django"],
+
+		["What are the inheritance properties in Django?",
+		"There is three possible inheritance in Django:"
+		+"<br>1.Abstract base classes: This style is used when you only want parent\’s class to hold information that you don\’t want to type out for each child model."
+		+"<br>2.Multi-table Inheritance: This style is used if you are sub-classing an existing model and need each model to have its own database table."
+		+"<br>3.Proxy models: This style is used, if you only want to modify the Python level behavior of the model, without changing the model’s fields.",
+		"What are the inheritance properties in Django"],
+
+		["How can you setup Database in Django?",
+		"To set up a database in Django, you can use the command edit my site/ setting.py, it is a normal python module with module level representing Django settings."
+		+"<br>Django uses SQLite database by default. It is easy for Django users because it doesn’t require any other type of installation. In the case of other databases, you have the following keys in the DATABASE \‘default\’ item to match your database connection settings."
+		+"<br>Engines: you can change database by using \‘django.db.backends.sqlite3\’ , \‘django.db.backeneds.mysql\’, \‘django.db.backends.postgresql_psycopg2\’, \‘django.db.backends.oracle\’"
+		+"<br>Name: The name of your database. In the case if you are using SQLite as your database, in that case, a database will be a file on your computer, Name should be a full absolute path, including the file name of that file."
+		+"<br>You can add setting likes setting like Password, Host, User, etc. in your database, if you are not choosing SQLite as your database.",
+		"How can you setup Database in Django"],
+
+		["How can you set up static files in Django?",
+		"There are three main things required to set up static files in Django:"
+		+"<br>•Set STATIC_ROOT in settings.py"
+		+"<br>•run manage.py collect static"
+		+"<br>•set up a Static Files entry on the PythonAnywhere web tab",
+		"How can you set up static files in Django"],
+
+		["What is the use of session framework in Django?",
+		"The session framework facilitates you to store and retrieve arbitrary data on a per-site visitor basis. It stores data on the server side and abstracts the receiving and sending of cookies. A session can be implemented through a piece of middleware.",
+		"What is the use of session framework in Django"],
+
+		["What are the roles of receiver and sender in signals?",
+		"The roles of receiver and sender in signals are:"
+		+"<br>Receiver: It specifies the callback function which will be connected to the signal."
+		+"<br>Sender: It specifies a particular sender to receive a signal from.",
+		"What are the roles of receiver and sender in signals"],
+
+		["What do you understand by Django?",
+		"Django is a free and open source web application framework, written in Python. Django is named after Django Reinhardt, Jazz guitarist from the 1930s to early 1950s who is one of the best guitarists of all time. Django was mainly developed to handle the intensive design of the newsroom. You can even build high-quality web applications using this. It adheres to the DRY principle and focuses completely on automating as much as possible.",
+		"What do you understand by Django"],
+
+		["What does Of Django Field Class types do?",
+		"It specifies the database column <br> It also specifies the default HTML widget which is availed while render the form field. <br> The requirements of the minimal validation which is used in Django admin is also specified by the field class",
+		"What does Of Django Field Class types do"],
+
+		["Does Django Follow Architectural pattern?",
+		"Yes, Django follows Model-View-Controller (MVC) architectural pattern.",
+		"Does Django Follow Architectural pattern"],
+
+		["Mention What Does The Django Templates Consists Of?",
+		"The template is a simple text file.  It can create any text-based format like XML, CSV, HTML, etc.  A template contains variables {{ variable_name }} that get replaced with values when the template is evaluated  and tags (% tag %) that controls the logic of the template like block tag that extends from another html, for, if, etc.",
+		"Mention What Does The Django Templates Consists Of"],
+
+		["Is Django stable or not?",
+		"Of course, Django is stable. Most of the companies are using it."],
+
+		["Is Django a high level or low-level framework?",
+		"Django is a high-level Python’s web framework which was designed for rapid development and clean realistic design."],
+
+		["What is the name of the Foundation which manages Django web framework?",
+		"Django web framework is managed and maintained by an independent and non-profit organization named Django Software Foundation (DSF)."],
+
+		["Name the features available in Django web framework?",
+		"Admin Interface (CRUD)"
+		+" <br> Templating"
+		+" <br> Form handling"
+		+" <br> Internationalization"
+		+" <br> Session, user management, role-based permissions"
+		+" <br> Object-relational mapping (ORM)"
+		+" <br> Testing Framework"
+		+" <br> Fantastic Documentation",
+		"Name the features available in Django web framework"],
+
+		["***What is the process of creating a project in Django?",
+		"To start a project in Django, use the command $django-admin.py and then use the following command:Project"
+		+" <br> __init__.py, manage.py, settings.py, urls.py"],
+
+		["Is Django a content management system (CMS)?",
+		"No, Django is not a Content Management System (CMS). Instead, it is a Web framework and a programming tool that helps you in building elegant websites."],
+
+		["What django collectstatic command does?*",
+		"Collect static will collect all the data inside the static folder in project directory and creates a copy in the STATIC_ROOT",
+		"What django collectstatic command does"],
+
+		["What is some typical usage of middlewares in Django?",
+		"Middleware is a function that acts on or transforms a request/response before/after it passes through the view layer "
+		+" <br> It can be used for Session management,"
+		+" <br> User authentication can be done with the help of this."
+		+" <br> It helps in Cross-site request forgery protection"
+		+" <br> Content Gzipping, etc.",
+		"What is some typical usage of middlewares in Django"],
+
+		["What is the usage of Django-admin.py and manage.py?",
+		"Django-admin.py: It is a Django’s command line utility for administrative tasks. "
+		+"<br> Manage.py: It is an automatically created file in each Django project. It is a thin wrapper around the Django-admin.py. It has the following usage:"
+		+" <br> It puts your project’s package on sys.path."
+		+" <br> It sets the DJANGO_SETTING_MODULE environment variable to points to your project’s setting.py file.",
+		"What is the usage of Django-admin and manage"],
+
+		["What are signals in Django?",
+		"Signal are inbuilt utility in Django. They allow to execute some piece of code based on some action or event is occurred in framework something like a new user register, on delete of a record."
+		+" <br> pre_save and post_save."
+		+" <br> pre_delete and post_delete"
+		+" <br> pre_request and post_request",
+		"What are signals in Django"],
+/*
+		["Django is based on which design pattern.",
+		"Django closely follows the MVC (Model View Controller) design pattern, however, it does use its own logic in the implementation. Because the C is handled by the framework itself and most of the excitement in Django happens in models, templates, and views, Django is often referred to as an MTV framework. In the MTV development pattern:"
+		+" <br> M stands for Model, the data access layer. This layer contains anything and everything about the data: how to access it, how to validate it, which behaviors it has, and the relationships between the data."
+		+" <br> T stands for Template, the presentation layer. This layer contains presentation-related decisions: how something should be displayed on a Web page or other type of document."
+		+" <br> V stands for View, the business logic layer. This layer contains the logic that accesses the model and defers to the appropriate template(s). You can think of it as the bridge between models and templates.",
+		""],
+*/
+		["List server requirement to install Django Framework.",
+		"As Django is Python Framework, in order to install Django Python is required. Django comes with an inbuilt lightweight web server that you can use for the testing purpose.If you are using Django on production Apache with mod_wsgi is required.",
+		"List server requirement to install Django Framework"],
+
+		/*
+		["List the database backends supported by Django Framework?",
+		"PostgreSQL, MySQL, SQLite, Oracle and 3d parties: SAP SQL Anywhere, IBM DM2, Microsoft SQL Server, Firebird, ODBC"],
+		*/
+
+		["What is recommended way to install Django?",
+		"Installing using pip is the recommended way to install Django Framework.: <br> Install pip. <br> Configure virtualenv and virtualenvwrapper <br> Once virtual environment is created and activated, enter the command pip install Django to install Django",
+		"What is recommended way to install Django"],
+
+		["How to install the development version of Django",
+		"$ git clone https://github.com/django/django.git <br> Make sure that the Python interpreter can load Django’s code. The most convenient way to do this is to use virtualenv, virtualenvwrapper, and pip. After setting up and activating the virtualenv, run the following command:<br> $ pip install -e django/ ",
+		"How to install the development version of Django"],
+
+		["Where are Django migrations stored?",
+		"You can think Django Migrations as version control system for your database/Model. It keeps track of changes done in your application Models/Table like adding a field, deleting a model, etc. Migrations in Django are stored as an on-disk format, referred to here as “migration files”. These files are actually just normal Python files with an agreed-upon object layout, written in a declarative style. A basic migration file looks like this",
+		"Where are Django migrations stored"],
+
+		["How a request is processed in Django?*",
+		"Django determines the root URLconf module to use."
+		+" <br> Django loads that Python module and looks for the variable urlpatterns."
+		+" <br> Django runs through each URL pattern, in order, and stops at the first one that matches the requested URL"
+		+" <br> Once one of the URL patterns matches, Django imports and calls the given view, which is a simple Python function (or a class-based view)",
+		"How a request is processed in Django"],
+
+		["When to use the iterator in Django ORM?",
+		"Iterators are used for traversing an object in Python which implements iterator protocol. It consists of two methods __iter__() and next()."
+		+" <br> In Django, a good use of iterator is when you are processing results that take up a large amount of available memory (lots of small objects or fewer large objects).",
+		"When to use the iterator in Django ORM"],
+
+		["When QuerySets are evaluated in Django?",
+		"In Django, a QuerySet can be evaluated in Iteration, Slicing, Pickling/Caching, repr(),len(), list() and bool().",
+		"When QuerySets are evaluated in Django"],
+
+		["How to set/unset session in Django?",
+		"Setting Session in Django"
+		+" <br> request.session[\'key\'] = \'value\'"
+		+" <br> Unset Session in Django"
+		+" <br> del request.session[\'key\']",
+		"How to set and unset session in Django"],
+
+		["What is a context in Django?",
+		"is a dictionary with variable names in the form of key and value like {varible1: 101, varible2: 102},when we pass this context to the template render method, {{ varible1 }} would be replaced with 101 and {{ varible2 }} with 102 in your template.",
+		"What is a context in Django"],
+
+		["Explain mixins in Django.",
+		"is a special kind of multiple inheritances in Python. There are two main situations where mixins are used: <br> You want to provide a lot of optional features for a class. <br> You want to use one particular feature in a lot of different classes.",
+		"Explain mixins in Django"],
+
+		["How to get current page URI in Django template.",
+		"You can use {{ request.path }} and {{ request.get_full_path }} to get current page URI in Django template",
+		"How to get current page URI in Django template"],
+
+		["How to create an Constant in Django.",
+		"To create a constant in Django. Open your settings.py file and add a variable like MY_CONST = \“MY_VALUE\”. To use this constant in your views simply import setting like \“Import settings in views.py\” and use it as settings.MY_CONST",
+		"How to create an Constant in Django"],
+
+		["List some caching strategies that you know in Django",
+		"File system caching, In-memory caching, Using Memcached, Database caching",
+		"List some caching strategies that you know in Django"],
+
+		["*args and **kwargs", 
+		"mostly used in function definitions; allow you to pass a variable number of arguments to a function. Variable means is that you do not know beforehand; how many arguments can be passsed to your function by the user so in this case you use these two keywords.", 
+		""],
+
+		
+		["*args", 
+		"used to send a non-keyworded variable length argument list to the function", 
+		""],
+
+
+		["**kwargs", 
+		"allows you to pass keyworded variable length of arguments to a function. use **kwargs if you want to handle named arguments in a function", 
+		""],		
+//new
+
+		["what does python manage.py migrate do", 
+		"slinks setting with django project and apps to database", 
+		""],
+
+		["How to create a project", 
+		"django-admin startproject project_name", 
+		""],
+
+		["How to create a app ", 
+		"python manage.py startapp app_name", 
+		""],
+
+		["In settings.py what does BASE_DIR means", 
+		"knows where the paths (location) of the project and used to be portable", 
+		""],
+
+		["Secret key and Debug and domain names", 
+		"In settings.py, Secret key must be keep secret so don't push git without replace when developed, debug must be false when live, for domain names in ALLOWD_HOSTS = [put_domain_names_here]", 
+		""],
+
+		["What is INSTALLED_APPS and apps", 
+		"Apps are more in terms of components or little pices of the greater django project itself; INSTALLED_APPS are application definition and adding your own apps or third party apps and preintall apps like admin, auth, etc", 
+		""],
+
+		["In settings.py, MIDDLEWARE, ROOT_URLCONF, AND TEMPLATES", 
+		"MIDDLEWARE is mostly request and security features, ROOT_URLCONF is how django routes any given url, TEMPLATES is html templates how they are stores and how it renders; there is a keyword DIRS that allows to store to a folder <br> \'DIRS\': [os.path.join(BASE_DIR, \"templates\")],", 
+		""],
+
+		["In settings.py, what is WSGI_APPLICATION and AUTH_PASSWORD_VALIDATORS", 
+		"its how your server works and AUTH_PASSWORD_VALIDATORS is password validation", 
+		""],
+
+
+		["In settings.py, STATIC_URL", 
+		"Static files (css, javascript, Images) where to store them", 
+		""],
+
+//add new cards
+
+		["In urls.py, what does urlpatterns do?", 
+		"The urlpatterns list routes URLs to views", 
+		""],
+
+		["how to get functions from other apps for urls purposes", 
+		"from app_name.views import function_view, other_function_view", 
+		""],
+//new
+		["within the urlpatterns list what is path", 
+		"In urlpatterns: The path returns an element for inclusion in urlpatterns; path(route, view, kwargs=None, name=None) ", 
+		""],
+
+		["In urlpatterns: The path returns an element for inclusion in urlpatterns; path(route, view, kwargs=None, name=None) what are the does route do", 
+		"The route argument should be a string or gettext_lazy() (see Translating URL patterns) that contains a URL pattern. The string may contain angle brackets (like <username> above) to capture part of the URL and send it as a keyword argument to the view. The angle brackets may include a converter specification (like the int part of <int:section>) which limits the characters matched and may also change the type of the variable passed to the view. <br> ", 
+		""],
+
+		["In urlpatterns: The path returns an element for inclusion in urlpatterns; path(route, view, kwargs=None, name=None) what are the does view and kwargs do", 
+		"The view argument is a view function or the result of as_view() for class-based views. It can also be an django.urls.include(). The kwargs argument allows you to pass additional arguments to the view function or method.", 
+		""],
+
+		["In urlpatterns: The path returns an element for inclusion in urlpatterns; path(route, view, kwargs=None, name=None) what are the does name do", 
+		"Use for naming URL patterns, choose names that are unlikely to clash with other applications’ choice of names for perform URL reverding. ", 
+		""],
+
+
+		["what is in models.py", 
+		"it has class that inherit from django models.Model that maps to the database using models.field and field type and etc: <br> <br> class ClassName(models.Model): <br> &nbsp; field_name = models.TextField(blank=True, null=True) <br> &nbsp; another_field_name = models.DecimalField(decimal_places=2, max_digits=10000)", 
+		""],
+
+		["what is an instance method on our model or a function on our model", 
+		"creates dynamic linking use for urls without going back to urls.py without include to change the route;  In model.py use get_absolute_url function that grabs the URL inside of Django so it\'s used in other places like html template and in the function returns reverse function with the name name arugment (in urls.py in the urlpatterns and in the path has a name argument to match the url path) and the kwargs", 
+		""],
+
+		["how to get all data in the database using function base view", 
+		"In the app view, import the model, create a function that get the request inside of the function: views a list of the database Oject like <br> queryset = Product.objects.all() <br> and put it in the context to be render with the html template as a variable", 
+		""],
+
+		["how to get detail of data id when click a link using function base view", 
+		"In app view, import the model, create a function that takes request and id, inside the function: <br> obj = get_object_or_404(Product, id=id) and put the obj in the context to render with the html template", 
+		""],
+
+		["how to delete and confirm for individe id using function base view", 
+		"In app view, import the model, create a function that takes request and id, inside the function: <br> obj = get_object_or_404(Product, id=id) <br> <font color="green">confirm delete <br> if request.method ==\"POST\" <br> &nbsp;  obj.delete() <br> <font color="green">redirect to show deletion has happen", </font> 
+		""],
+
+		["How to save user\'s info to database using function base view", 
+		"Create python file name forms.py and import app model: "
+        +"<br> class ProductForm(forms.ModelForm):"
+        +"<br> &nbsp; class Meta:"
+        +"<br> &nbsp; &nbsp; model = Product"
+        +"<br> &nbsp; &nbsp; fields = [\'title\',\'description\',\'price\']"
+        +"<br> <br> In view, import the forms.py, "
+        +"<br> def product_create_view(request):"
+		+"<br> &nbsp; <font color="green">all this does is renders out that form if post data comes through (request.POST) otherwise (or) we'll just render out an empty (None)"</font> 
+        +"<br> &nbsp; form = ProductForm(request.POST or None) <br> &nbsp; if form.is_valid():"
+        +"<br> &nbsp; &nbsp; forms.save()"
+        +"<br> <br> the rest of the function redirect to another html showing that it is save and after the if statement save the form to the context to render with the html template that show the form to let the user save info"
+        , 
+		""],
+
+
+		["how to update data using function base view", 
+		"Like saving data from user, first create forms.py or reuse forms, in view: "
+        +"<br> def product_update_view(request, id=id):"
+        +"<br> &nbsp; obj = get_object_or_404(Product, id=id)"
+        +"<br> &nbsp; form = ProductForm(request.POST or None, instance=obj)"
+        +"<br> &nbsp; if form.is_valid():"
+        +"<br> &nbsp; &nbsp; form.save()"
+        +"<br> &nbsp; context = { \'form\': form }"
+        +"<br> &nbsp; return render(request, \"products/product_create.html\", context)", 
+		""],
+
+		["what are widgets", 
+		"Allows for to change the forms within forms.py from change the class, id, etc like so: <br> class RawProductForm(forms.Form): <br> &nbsp; title = forms.CharField(label=\'\', widget=forms.TextInput(attrs={\"placeholder\": \"Your title\"})) <br> <br> also you can overwrite in the ModelForm", 
+		""],
+
+
+		["form Validation Methods", 
+		"to do so in the forms.py within the class where it inhert from forms.Model; create a function name clean_<fieldName> with self as first parameter, *args, **kwargs <br> field_name = self.cleaned_data.get(\"field_name\") afterwares add conditions with raise statement with forms.ValidationError(\"Input for user\")"
+		, 
+		""],
+	
