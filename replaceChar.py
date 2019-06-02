@@ -3,7 +3,7 @@ newtexts = ""
 
 for line in file:
     if ('#' in line):
-        line = line.replace("#", "<font color=\"green\">")
+        line = line.replace("#", "<font color=\"green\">#")
         #print("<font color=\"green\">" + line[:-1] + "</font>")
         newtexts += line[:-1] + "</font> \n"
     else:
