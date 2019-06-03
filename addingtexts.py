@@ -6,14 +6,14 @@ def charReplace(line):
     line = line.replace("`", "\\`")
     line = line.replace('"', '\\"')
     line = line.replace('&', '&amp;')
-    line = line.replace('<', '&gt;')
+    line = line.replace('<', '&lt;')
     line = line.replace('>', '&gt;')
     return line
 newtexts += '\t\t["",\n'
 for line in file:
     nob = 0
     for ni in line:
-        if(ni == ' ' and ni.endswith('n')):
+        if(ni == ' '):
             nob += 1
         else:
             nos = nob
@@ -22,11 +22,12 @@ for line in file:
                 line = charReplace(line)
                 newtexts += "\t\t+\"<br> "+ "&nbsp; "*int(nob) + line[nos:-1] + "\"\n"
             else:
+                line = charReplace(line)
                 if (line[0:2] == "/*" or line[0:2] == "*/" or line[0:2] == "//"):
                     if (line[0:2] == "/*"):
                         newtexts += '\t\t+"<br> <font color=\\\"green\\\">'+ line[:-1] + '"\n'
                     elif (line[0:2] == "*/"):
-                        newtexts += '\t\t+"<br> '+ line[:-1] + '<font color=\\\"green\\\">"\n'
+                        newtexts += '\t\t+"<br> '+ line[:-1] + '</font>"\n'
                     elif (line[0:2] == "//"):
                         newtexts += '\t\t+"<br> <font color=\\\"green\\\">'+ line[:-1] + '</font>"\n'
                 else:
