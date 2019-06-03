@@ -15,3 +15,9 @@ file.close()
 newfile = open("newtexts.txt", "w")
 newfile.write(newtexts)
 newfile.close 
+
+        # In HTML proper, there’s no way short of escaping some characters:
+
+        # & as &amp;
+        # < as &gt;
+        # > as &gt;

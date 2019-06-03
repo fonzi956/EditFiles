@@ -1,14 +1,10 @@
-+"<br> import React from \'react\';"
-+"<br> import ReactDOM from \'react-dom\';"
-+"<br> "
-+"<br> class Test extends React.Component {"
-+"<br> render() {"
-+"<br> &nbsp; return <h1>Hello World!</h1>;"
-+"<br> }"
-+"<br> }"
-+"<br> "
-+"<br> ReactDOM.render(<Test />, document.getElementById(\'root\'));"
-+"<br> "
-+"<br> # In this example we create a component called \'Test\'."
-+"<br> # The component is rendered in a container called \'root\'."
-+"<br> # In the index.html that has <div id="root"></div>"
+How does React Work?
+React creates a VIRTUAL DOM in memory.
+
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+
+React only changes what needs to be changed!
+
+React finds out what changes have been made, and changes only what needs to be changed.
+
+You will learn the various aspects of how React does this in the rest of this tutorial.
