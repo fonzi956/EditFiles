@@ -5,7 +5,7 @@ def charReplace(line):
     line = line.replace("'", "\\'")
     line = line.replace("`", "\\`")
     line = line.replace('"', '\\"')
-    line = line.replace('&', '&amp;')
+    #line = line.replace('&', '&amp;')
     line = line.replace('<', '&lt;')
     line = line.replace('>', '&gt;')
     return line
