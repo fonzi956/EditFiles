@@ -7,17 +7,17 @@ for line in file:
         #print("<font color=\"green\">" + line[:-1] + "</font>")
         newtexts += line[:-1] + "</font> \n"
     else:
-        #print(line[:-1])
+        # print(line[:-1])
         newtexts += line[:-1] + "\n"
-#print(newtexts)
+# print(newtexts)
 
 file.close()
 newfile = open("newtexts.txt", "w")
 newfile.write(newtexts)
-newfile.close 
+newfile.close
 
-        # In HTML proper, there’s no way short of escaping some characters:
+# In HTML proper, there’s no way short of escaping some characters:
 
-        # & as &amp;
-        # < as &gt;
-        # > as &gt;
+# & as &amp;
+# < as &gt;
+# > as &gt;
