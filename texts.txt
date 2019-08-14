@@ -1,3 +1,14 @@
-# Why Analyze Algorithms?
-# Procedure or formula for solving a problem.
-# Some are so useful thet have names: merge sort, bubble sort etc...
+# Space Complexity
+# also concerned with how much memory/space an algorithm uses. The notation of space complexity is the same, but instead of checking the time of operations, we check the size of the allocation of memory.
+def memory(n):
+    # Prints "hello world!" n times
+
+    # TIME COMPLEXITY O(n)
+    for x in range(n):
+        
+        # SPACE COMPLEXITY O(1)
+        print('Memory')
+memory(10)
+
+# O(n) for time complexity but what about space comlexity.
+# In memory it does not neeed to store 10 versions of "Memory!" it only nned store one string. O(1)

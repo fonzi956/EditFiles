@@ -1,4 +1,15 @@
-		["Why Analyze Algorithms?",
-		"<font color=\"green\"># Procedure or formula for solving a problem. </font>"
-		+"<br> <font color=\"green\"># Some are so useful thet have names: merge sort, bubble sort etc... </font>"
+		["Space Complexity",
+		"<font color=\"green\"># also concerned with how much memory/space an algorithm uses. The notation of space complexity is the same, but instead of checking the time of operations, we check the size of the allocation of memory. </font>"
+		+"<br> def memory(n):"
+		+"<br> &nbsp; &nbsp; <font color=\"green\"># Prints \"hello world!\" n times </font>"
+		+"<br> "
+		+"<br> &nbsp; &nbsp; <font color=\"green\"># TIME COMPLEXITY O(n) </font>"
+		+"<br> &nbsp; &nbsp; for x in range(n):"
+		+"<br> &nbsp; &nbsp; &nbsp; &nbsp; "
+		+"<br> &nbsp; &nbsp; &nbsp; &nbsp; <font color=\"green\"># SPACE COMPLEXITY O(1) </font>"
+		+"<br> &nbsp; &nbsp; &nbsp; &nbsp; print(\'Memory\')"
+		+"<br> memory(10)"
+		+"<br> "
+		+"<br> <font color=\"green\"># O(n) for time complexity but what about space comlexity. </font>"
+		+"<br> <font color=\"green\"># In memory it does not neeed to store 10 versions of \"Memory!\" it only nned store one string. O(1) </font>"
 		,""],
