@@ -1,14 +1,43 @@
-# Space Complexity
-# also concerned with how much memory/space an algorithm uses. The notation of space complexity is the same, but instead of checking the time of operations, we check the size of the allocation of memory.
-def memory(n):
-    # Prints "hello world!" n times
+[}# ARRAY SEQUENCES:
+# using List, Tuple, String("")
+# To understand how arrays work we need to understand low level computer architecture:
+# * memory stored in bits
+# * 8bits = 1byte
+# * memory address for each byte
+# stored and retrieved in O(1) constant time.
 
-    # TIME COMPLEXITY O(n)
-    for x in range(n):
-        
-        # SPACE COMPLEXITY O(1)
-        print('Memory')
-memory(10)
+# Python represents UNICODE character with 16 bits (2 bytes)
+# EX: SAMPLE is 6 characters = 12 bytes
+# * ARRAY of characters
+# * Each character takes up a CELL
+# * INDEX describes location
+{]
+[}# Lists and References
+# Create a list called primes, storing prime numbers.
+# If I create a new object temp, and have it reference a portion of my prime list I have created a new but referencing an exiting index location.
+# If I want to change an indexed assignment in new temp list..
+# temp[2] = 15
+# The original list is not changed, the new indexed position just points to a different object.
+# Take away = new lists create a shallow copy meaning your only changing/creating your pointers, not duplicating objects in memory.
+# Much of what we are doing is manipulating references and calls, not the objects itself.
 
-# O(n) for time complexity but what about space comlexity.
-# In memory it does not neeed to store 10 versions of "Memory!" it only nned store one string. O(1)
+import sys
+n=10
+data = []
+for i in range(n):
+    a = len(data)
+    b = sys.getsizeof(data)
+    print('Length: {0:3d}; Size in bytes: {1:4d}'.format(a,b))
+    data.append(n)
+# Length:   0; Size in bytes:   64
+# Length:   1; Size in bytes:   96
+# Length:   2; Size in bytes:   96
+# Length:   3; Size in bytes:   96
+# Length:   4; Size in bytes:   96
+# Length:   5; Size in bytes:  128
+# Length:   6; Size in bytes:  128
+# Length:   7; Size in bytes:  128
+# Length:   8; Size in bytes:  128
+# Length:   9; Size in bytes:  192
+# it create a new sides and it's gonna hold it as long as it can and then it's going to move that array into a larger array of memory so that it can hold those put but it's not point four point it will hold it for a certain number of time and as the length increases then it will jump to the appropriate size of memory of course until you get a memory error.
+{]
